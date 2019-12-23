@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GIMS" parallel="false" preserve-order="true">
+    <parameter name="url" value="http://172.25.49.142:8077/djjf-web"></parameter>
+
+
+    <test name="AddConsumer">
+        <classes>
+            <class name="com.jd.highend.gimscases.AddConsumer"></class>
+        </classes>
+
+    </test>
+    <test name="Declaration">
+        <classes>
+            <class name="com.jd.highend.gimscases.Declaration"></class>
+        </classes>
+    </test>
+
+    <!--<listeners>-->
+        <!--<listener class-name="org.uncommons.reportng.HTMLReporter" />-->
+        <!--<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />-->
+    <!--</listeners>-->
+    <!--监听器  测试报告-->
+    <listeners>
+        <listener class-name="com.jd.highend.listener.ExtentTestNGIReporterListener"></listener>
+    </listeners>
+
+</suite>

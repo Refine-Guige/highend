@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jsf="http://jsf.jd.com/schema/jsf"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://jsf.jd.com/schema/jsf http://jsf.jd.com/schema/jsf/jsf.xsd"
+       default-autowire="byName">
+
+
+    <jsf:consumer id="IGimsProductService"
+                  interface="com.dj.gims.api.product.IGimsProductService"
+                  alias="gims-test-IGimsProductService" protocol="jsf" timeout="5000">
+    </jsf:consumer>
+    <jsf:consumer id="cityService"
+                  interface="com.jd.dpms.dbs.api.service.ICityService"
+                  alias="dpms_dbs_local" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+
+
+    <jsf:consumer id="DongrichService"
+                  interface="com.jd.pfund.api.dongrich.DongrichService"
+                  alias="DongrichService" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+    <jsf:consumer id="GdGatewayDMMerchantServiceImpl"
+                  interface="com.jd.pfund.api.dm.DMMerchantService"
+                  alias="GdGatewayDMMerchantServiceImpl" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+
+    <jsf:consumer id="DMProductService"
+                  interface="com.jd.pfund.api.dm.DMProductService"
+                  alias="DMProductServiceImpl" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+
+    <jsf:consumer id="IGdAccAllInsideService"
+                  interface="com.jd.pfund.acc.api.service.IGdAccAllInsideService"
+                  alias="pfund_acc_test" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+    <jsf:consumer id="IGimsTradeService"
+                  interface="com.dj.gims.api.trade.IGimsTradeService"
+                  alias="gims-test-IGimsTradeService" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+
+    <jsf:consumer id="ActivityHttpService"
+                  interface="com.jd.adms.service.http.ActivityHttpService"
+                  alias="ActivityHttpService" protocol="jsf" timeout="3000">
+    </jsf:consumer>
+
+</beans>
